@@ -8,6 +8,7 @@ blaze@2.0.2
 boilerplate-generator@1.0.1
 callback-hook@1.0.1
 check@1.0.2
+coffeescript@1.0.4
 ctl-helper@1.0.4
 ctl@1.0.2
 ddp@1.0.10
@@ -23,6 +24,7 @@ id-map@1.0.1
 insecure@1.0.1
 jquery@1.0.1
 json@1.0.1
+less@1.0.10
 livedata@1.0.11
 logging@1.0.4
 meteor-platform@1.1.2
