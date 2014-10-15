@@ -7,6 +7,7 @@ body {
 
 #background {
   position: absolute;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -15,10 +16,34 @@ body {
 
 #translucent {
   position: absolute;
+  z-index: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   margin: 0;
   opacity: 0.3;
   background-image: linear-gradient(to top, black, white);
+}
+
+#playground {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  #slogan {
+    margin: 0;
+  }
+  .instrument-icon {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+h1#logo {
+  font-family: 'Bilbo Swash Caps', cursive;
+  font-size: 64px;
+  text-shadow: 0 0 3px #000;
+  margin-bottom: 0;
 }
