@@ -6,7 +6,7 @@ if Meteor.isClient
 
   Meteor.setInterval ->
     $('#background').css('background-color', "hsl(#{Math.random() * 255}, 70%, 30%)")
-  , 2000
+  , 1000
 
   Notes.find({}).observe
     added: (note) ->
