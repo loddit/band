@@ -1,6 +1,7 @@
 Notes = new Meteor.Collection 'notes'
 
 if Meteor.isClient
+  time = null
 
   Meteor.setInterval ->
     $('#background').css('background-color', "hsl(#{Math.random() * 255}, 70%, 30%)")
@@ -8,10 +9,11 @@ if Meteor.isClient
 
   Notes.find({}).observe
     added: (note) ->
-      console.log note
       playDrum note.pitch
+      console.log(new Date() - time) # delay profile
 
   keyPress = (event) ->
+    time = new Date()
     event.preventDefault()
     Notes.insert
       pitch: parseInt @key
