@@ -13,38 +13,42 @@
       <img class="instrument-icon" src="/keyboard_icon.png">
       <img class="instrument-icon" src="/drums_icon.png">
     </div>
-    <div id="piano">
-      <ul id="white-keys">
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-        <li class="white-key"></li>
-      </ul>
-      <ul id="black-keys">
-        <li class="black-key"></li>
-        <li class="black-key"></li>
-        <li class="black-key hidden"></li>
-        <li class="black-key"></li>
-        <li class="black-key"></li>
-        <li class="black-key hidden"></li>
-        <li class="black-key"></li>
-        <li class="black-key"></li>
-        <li class="black-key"></li>
-        <li class="black-key hidden"></li>
-        <li class="black-key"></li>
-        <li class="black-key"></li>
-      </ul>
-    </div>
+    {{> piano}}
   </div>
 </body>
+
+<template name="piano">
+  <div id="piano">
+    <ul id="white-keys">
+      <li class="white-key" data-pitch="-5"></li>
+      <li class="white-key" data-pitch="-3"></li>
+      <li class="white-key" data-pitch="-1"></li>
+      <li class="white-key" data-pitch="0"></li>
+      <li class="white-key" data-pitch="2"></li>
+      <li class="white-key" data-pitch="4"></li>
+      <li class="white-key" data-pitch="5"></li>
+      <li class="white-key" data-pitch="7"></li>
+      <li class="white-key" data-pitch="9"></li>
+      <li class="white-key" data-pitch="11"></li>
+      <li class="white-key" data-pitch="12"></li>
+      <li class="white-key" data-pitch="14"></li>
+      <li class="white-key" data-pitch="16"></li>
+    </ul>
+    <ul id="black-keys">
+      <li class="black-key" data-pitch="-4"></li>
+      <li class="black-key" data-pitch="-3"></li>
+      <li class="black-key hidden"></li>
+      <li class="black-key" data-pitch="1"></li>
+      <li class="black-key" data-pitch="3"></li>
+      <li class="black-key hidden"></li>
+      <li class="black-key" data-pitch="6"></li>
+      <li class="black-key" data-pitch="8"></li>
+      <li class="black-key" data-pitch="10"></li>
+      <li class="black-key hidden"></li>
+      <li class="black-key" data-pitch="13"></li>
+      <li class="black-key" data-pitch="15"></li>
+    </ul>
+  </div>
+</template>
 
 

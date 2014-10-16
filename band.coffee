@@ -49,6 +49,14 @@ if Meteor.isClient
 
   keymaster 'q,w,e,r,t,y,u,i,o,p,[,],\\,z,x,c,v,b,n,m', keyPress
 
+  Template.piano.events
+    "click li": (e) ->
+      $pianoKey = $(e.target)
+      Notes.insert
+        pitch: $pianoKey.data('pitch')
+        instrument: 'piano'
+
+
 if Meteor.isServer
   Meteor.startup ->
     Notes.remove({})
