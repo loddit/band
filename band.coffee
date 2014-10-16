@@ -30,24 +30,33 @@ if Meteor.isClient
       n: 5
       m: 6
       q: -5
+      2: -4
       w: -3
+      3: -2
       e: -1
       r: 0
+      5: 1
       t: 2
+      6: 3
       y: 4
       u: 5
+      8: 6
       i: 7
+      9: 8
       o: 9
+      0: 10
       p: 11
       "[": 12
+      "=": 13
       "]": 14
+      backspace: 15
       "\\": 16
 
     Notes.insert
       pitch: keyMap[@key]
       instrument: instrument
 
-  keymaster 'q,w,e,r,t,y,u,i,o,p,[,],\\,z,x,c,v,b,n,m', keyPress
+  keymaster 'q,w,e,r,t,y,u,i,o,p,[,],\\,z,x,c,v,b,n,m,2,3,5,6,7,9,0,-,=,backspace', keyPress
 
   Template.piano.events
     "click li": (e) ->
