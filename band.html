@@ -15,6 +15,7 @@
     </div>
     {{> piano}}
   </div>
+  {{> notes}}
 </body>
 
 <template name="piano">
@@ -52,3 +53,14 @@
 </template>
 
 
+<template name="notes">
+  <div id="notes">
+    {{#each notes}}
+      {{>note}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="note">
+  <div class="note" style="{{getStyle}}"></div>
+</template>
