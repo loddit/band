@@ -13,7 +13,7 @@
       <img class="instrument-icon" src="/keyboard_icon.png">
       <img class="instrument-icon" src="/drums_icon.png">
     </div>
-    {{> piano}}
+    {{> drums}}
     <div id="footer">
       <p>
         shortcuts from [Q..\] and [Z..M] | 2014 by loddit
@@ -56,6 +56,37 @@
     </ul>
   </div>
 </template>
+
+<template name="drums">
+  <div id="drums">
+    <div id="bass-drum">
+      <ul class="lugs">
+        <li class="lug first"></li>
+        <li class="lug second"></li>
+        <li class="lug third"></li>
+        <li class="lug fourth"></li>
+        <li class="lug fifth"></li>
+        <li class="lug sixth"></li>
+        <li class="lug seventh"></li>
+        <li class="lug eighth"></li>
+      </ul>
+    </div>
+    <div id="snare-drum">
+        <ul class="lugs">
+          <li class="lug first"></li>
+          <li class="lug second"></li>
+          <li class="lug third"></li>
+          <li class="lug fourth"></li>
+          <li class="lug fifth"></li>
+          <li class="lug sixth"></li>
+          <li class="lug seventh"></li>
+          <li class="lug eighth"></li>
+        </ul>
+      </div>
+
+  </div>
+</template>
+
 
 <template name="notes">
   <div id="notes">
