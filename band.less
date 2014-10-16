@@ -33,6 +33,7 @@ body {
   text-align: center;
   #slogan {
     margin: 0;
+    text-shadow: 0 0 1px #000;
   }
   .instrument-icon {
     width: 64px;
@@ -51,14 +52,14 @@ body {
 h1#logo {
   font-family: 'Bilbo Swash Caps', cursive;
   font-size: 64px;
-  text-shadow: 0 0 3px #000;
+  text-shadow: 0 0 2px #000;
   margin-bottom: 0;
 }
 
 #piano {
   display: inline-block;
   text-align: left;
-  margin: 40px auto;
+  margin-top: 40px;
   #white-keys {
     margin: 0;
   }
@@ -105,7 +106,7 @@ h1#logo {
   border-radius: @radius * 2;
   border: 4px solid #fff;
   vertical-align: middle;
-  margin: 2vw;
+  margin: 1vw;
   .lugs {
     margin-top: @radius;
     margin-left: @radius;
@@ -155,10 +156,13 @@ h1#logo {
     }
   }
   #bass-drum {
-    .drum(8vw)
+    .drum(6vw)
   }
   #snare-drum {
-    .drum(6vw)
+    .drum(4vw)
+  }
+  .tom {
+    .drum(3vw)
   }
 }
 
