@@ -67,7 +67,7 @@ if Meteor.isClient
 
   Template.drums.events
     "click #drums > div": (e) ->
-      $drum = $(e.target).closest('div')
+      $drum = $(e.target).closest('#drums > div')
       Notes.insert
         pitch: $drum.data('pitch')
         instrument: 'drums'

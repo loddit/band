@@ -9,6 +9,7 @@ body {
 ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 #background {
@@ -110,9 +111,6 @@ h1#logo {
   height: @radius * 2;
   border-radius: @radius * 2;
   border: 4px solid white;
-  vertical-align: middle;
-  margin: 1vw;
-  cursor: pointer;
   .lugs {
     margin-top: @radius;
     margin-left: @radius;
@@ -124,10 +122,17 @@ h1#logo {
     width: @radius / 2;
     height: @radius / 2;
     background-color: white;
-    border-radius: 100%;
+    border-radius: @radius / 2;
     margin-left: @radius * 3 / 4 ;
     margin-top: -@radius / 4 ;
   }
+}
+
+#drums > div {
+  margin: 1vw;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 #drums {
@@ -181,7 +186,6 @@ h1#logo {
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
-    padding: 1vw;
     #left-clap {
       border: 4px solid white;
       border-radius: 8px 0 0 8px;
@@ -195,6 +199,59 @@ h1#logo {
       display: inline-block;
       width: 1vw;
       height: 4vw;
+    }
+  }
+  #cymbal {
+    height: 7vw;
+    width: 7vw;
+    border: 4px solid white;
+    border-radius: 7vw;
+    text-align: center;
+    .cap {
+      position: relative;
+      top: -2px;
+      margin-top: 2vw;
+      display: inline-block;
+      height: 3vw;
+      width: 3vw;
+      border: 2px solid white;
+      border-radius: 3vw;
+      .top {
+        height: 1vw;
+        width: 1vw;
+        margin-top: 1vw;
+        margin-left: 1vw;
+        background-color: white;
+        border-radius: 1vw;
+      }
+    }
+  }
+  #hi-hat {
+    height: 7vw;
+    width: 7vw;
+    border: 4px solid white;
+    border-radius: 7vw;
+    text-align: center;
+    box-sizing: border-box;
+    .top {
+      position: relative;
+      top: -4px;
+      left: -4px;
+      height: 0.8vw;
+      width: 0.8vw;
+      margin-top: 3.1vw;
+      margin-left: 3.1vw;
+      background-color: white;
+      border-radius: 0.5vw;
+    }
+    .hat-bottom {
+      position: absolute;
+      margin-left: -4px;
+      height: 7vw;
+      width: 7vw;
+      box-sizing: padding-box;
+      border-bottom: 4px solid white;
+      border-radius: 7vw;
     }
   }
 }
