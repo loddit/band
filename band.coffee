@@ -71,7 +71,7 @@ if Meteor.isClient
   Template.note.helpers
     getStyle: ->
       if @instrument is "drums"
-        offset = 20
+        offset = 17
       else
         offset = 0
       "top: #{(@pitch + 15 + offset) * 2}vh; background-color: hsl(#{Math.random() * 255}, 100%, 70%)"
