@@ -6,6 +6,11 @@ body {
   overflow: hidden;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 #background {
   position: absolute;
   z-index: -2;
@@ -29,7 +34,7 @@ body {
 
 #playground {
   height: 100vh;
-  color: #fff;
+  color: white;
   text-align: center;
   #slogan {
     margin: 0;
@@ -86,7 +91,7 @@ h1#logo {
   .black-key {
     position: relative;
     display: inline-block;
-    background-color: #fff;
+    background-color: white;
     margin: 0 -8px 0 2vw;
     border: 4px solid white;
     border-radius: 0 0 4px 4px;
@@ -104,7 +109,7 @@ h1#logo {
   width: @radius * 2;
   height: @radius * 2;
   border-radius: @radius * 2;
-  border: 4px solid #fff;
+  border: 4px solid white;
   vertical-align: middle;
   margin: 1vw;
   cursor: pointer;
@@ -118,7 +123,7 @@ h1#logo {
   .sticker {
     width: @radius / 2;
     height: @radius / 2;
-    background-color: #fff;
+    background-color: white;
     border-radius: 100%;
     margin-left: @radius * 3 / 4 ;
     margin-top: -@radius / 4 ;
@@ -127,13 +132,11 @@ h1#logo {
 
 #drums {
   .lugs {
-    margin: 0;
-    padding: 0;
     .lug {
       position: absolute;
       display: block;
-      border-right: 4px solid #fff;
-      border-left: 3px solid transparent;
+      border-right: 4px solid white;
+      border-left: 2px solid transparent;
       border-radius: 1vw;
       height: 1vw;
       margin-top: -0.5vw;
@@ -164,14 +167,35 @@ h1#logo {
       }
     }
   }
+
   #bass-drum {
-    .drum(6vw)
+    .drum(5vw)
   }
   #snare-drum {
-    .drum(4vw)
+    .drum(3vw)
   }
   .tom {
-    .drum(3vw)
+    .drum(2vw)
+  }
+  #clap {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 1vw;
+    #left-clap {
+      border: 4px solid white;
+      border-radius: 8px 0 0 8px;
+      display: inline-block;
+      width: 1vw;
+      height: 4vw;
+    }
+    #right-clap {
+      border: 4px solid white;
+      border-radius: 0 8px 8px 0;
+      display: inline-block;
+      width: 1vw;
+      height: 4vw;
+    }
   }
 }
 

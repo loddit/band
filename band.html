@@ -13,8 +13,8 @@
       <img class="instrument-icon" src="/keyboard_icon.png">
       <img class="instrument-icon" src="/drums_icon.png">
     </div>
-    {{> piano}}
     {{> drums}}
+    {{> piano}}
     <div id="footer">
       <p>
         shortcuts from [Q..\] and [Z..M] | 2014 by loddit
@@ -86,7 +86,13 @@
       </ul>
       <div class="sticker"></div>
     </div>
-    <div class="tom" data-pitch="4">
+    <div id="clap" data-pitch="4">
+      <ul>
+        <li id="left-clap"></li>
+        <li id="right-clap"></li>
+      </ul>
+    </div>
+    <div class="tom" data-pitch="5">
       <ul class="lugs">
         <li class="lug first"></li>
         <li class="lug second"></li>
@@ -98,7 +104,7 @@
         <li class="lug eighth"></li>
       </ul>
     </div>
-    <div class="tom" data-pitch="5">
+    <div class="tom" data-pitch="6">
       <ul class="lugs">
         <li class="lug first"></li>
         <li class="lug second"></li>
