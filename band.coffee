@@ -65,6 +65,13 @@ if Meteor.isClient
         pitch: $pianoKey.data('pitch')
         instrument: 'piano'
 
+  Template.drums.events
+    "click #drums > div": (e) ->
+      $drum = $(e.target).closest('div')
+      Notes.insert
+        pitch: $drum.data('pitch')
+        instrument: 'drums'
+
   Template.notes.helpers
     notes: Notes.find {}
 
