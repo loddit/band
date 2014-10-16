@@ -98,6 +98,23 @@ h1#logo {
   }
 }
 
+.drum (@radius) {
+  display: inline-block;
+  width: @radius * 2;
+  height: @radius * 2;
+  border-radius: @radius * 2;
+  border: 4px solid #fff;
+  vertical-align: middle;
+  margin: 2vw;
+  .lugs {
+    margin-top: @radius;
+    margin-left: @radius;
+    .lug {
+      width: @radius;
+    }
+  }
+}
+
 #drums {
   .lugs {
     margin: 0;
@@ -112,59 +129,36 @@ h1#logo {
       margin-top: -0.5vw;
       transform-origin: 0 50% 0;
       &.first {
-        transform: rotate(45deg)
+        transform: rotate(45deg * 1 - 22.5deg)
       }
       &.second {
-        transform: rotate(45deg * 2)
+        transform: rotate(45deg * 2 - 22.5deg)
       }
       &.third {
-        transform: rotate(45deg * 3)
+        transform: rotate(45deg * 3 - 22.5deg)
       }
       &.fourth {
-        transform: rotate(45deg * 4)
+        transform: rotate(45deg * 4 - 22.5deg)
       }
       &.fifth {
-        transform: rotate(45deg * 5)
+        transform: rotate(45deg * 5 - 22.5deg)
       }
       &.sixth {
-        transform: rotate(45deg * 6)
+        transform: rotate(45deg * 6 - 22.5deg)
       }
       &.seventh {
-        transform: rotate(45deg * 7)
+        transform: rotate(45deg * 7 - 22.5deg)
+      }
+      &.eighth {
+        transform: rotate(45deg * 8 - 22.5deg)
       }
     }
   }
   #bass-drum {
-    display: inline-block;
-    width: 16vw;
-    height: 16vw;
-    border-radius: 16vw;
-    border: 4px solid #fff;
-    vertical-align: middle;
-    margin: 2vw;
-    .lugs {
-      margin-top: 8vw;
-      margin-left: 8vw;
-      .lug {
-        width: 8vw;
-      }
-    }
+    .drum(8vw)
   }
   #snare-drum {
-    display: inline-block;
-    width: 12vw;
-    height: 12vw;
-    border-radius: 12vw;
-    border: 4px solid #fff;
-    vertical-align: middle;
-    margin: 2vw;
-    .lugs {
-      margin-top: 6vw;
-      margin-left: 6vw;
-      .lug {
-        width: 6vw;
-      }
-    }
+    .drum(6vw)
   }
 }
 
