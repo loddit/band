@@ -28,6 +28,10 @@ if Meteor.isClient
   Template.piano.events
     "click li": (e) ->
       $pianoKey = $(e.target)
+      $pianoKey.addClass 'clicked'
+      Meteor.setTimeout ->
+        $pianoKey.removeClass 'clicked'
+      , 300
       Notes.insert
         pitch: $pianoKey.data('pitch')
         instrument: 'piano'
@@ -35,6 +39,10 @@ if Meteor.isClient
   Template.drums.events
     "click #drums > div": (e) ->
       $drum = $(e.target).closest('#drums > div')
+      $drum.addClass 'clicked'
+      Meteor.setTimeout ->
+        $drum.removeClass 'clicked'
+      , 300
       Notes.insert
         pitch: $drum.data('pitch')
         instrument: 'drums'

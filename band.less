@@ -70,12 +70,18 @@ h1#logo {
     margin: 0;
   }
   .white-key {
+    position: relative;
     display: inline-block;
     border: 4px solid white;
     width: 4vw;
     height: 16vw;
     margin: 0 0 0 -8px;
     cursor: pointer;
+    &.clicked {
+      margin-top: -0.2vw;
+      top: 0.2vw;
+      height: 16.2vw;
+    }
     &:last-child {
       border-radius: 0 6px 6px 0;
     }
@@ -99,6 +105,11 @@ h1#logo {
     width: 2vw;
     height: 10vw;
     cursor: pointer;
+    &.clicked {
+      margin-top: -0.2vw;
+      top: 0.2vw;
+      height: 10.2vw;
+    }
     &.hidden {
       visibility: hidden;
     }
@@ -106,11 +117,15 @@ h1#logo {
 }
 
 .drum (@radius) {
+  position: relative;
   display: inline-block;
   width: @radius * 2;
   height: @radius * 2;
   border-radius: @radius * 2;
   border: 4px solid white;
+  &.clicked {
+    transform: scaleY(0.96);
+  }
   .lugs {
     margin-top: @radius;
     margin-left: @radius;
@@ -207,6 +222,9 @@ h1#logo {
     border: 4px solid white;
     border-radius: 7vw;
     text-align: center;
+    &.clicked {
+      transform: scaleY(0.96);
+    }
     .cap {
       position: relative;
       top: -2px;
@@ -233,6 +251,11 @@ h1#logo {
     border-radius: 7vw;
     text-align: center;
     box-sizing: border-box;
+    &.clicked {
+      .hat-bottom {
+        margin-top: -0.3vw;
+      }
+    }
     .top {
       position: relative;
       top: -4px;
