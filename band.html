@@ -27,40 +27,40 @@
 <template name="piano">
   <div id="piano">
     <ul id="white-keys">
-      <li class="white-key" data-pitch="-5"></li>
-      <li class="white-key" data-pitch="-3"></li>
-      <li class="white-key" data-pitch="-1"></li>
-      <li class="white-key" data-pitch="0"></li>
-      <li class="white-key" data-pitch="2"></li>
-      <li class="white-key" data-pitch="4"></li>
-      <li class="white-key" data-pitch="5"></li>
-      <li class="white-key" data-pitch="7"></li>
-      <li class="white-key" data-pitch="9"></li>
-      <li class="white-key" data-pitch="11"></li>
-      <li class="white-key" data-pitch="12"></li>
-      <li class="white-key" data-pitch="14"></li>
-      <li class="white-key" data-pitch="16"></li>
+      <li class="white-key" data-key="q" data-pitch="-5"></li>
+      <li class="white-key" data-key="w" data-pitch="-3"></li>
+      <li class="white-key" data-key="e" data-pitch="-1"></li>
+      <li class="white-key" data-key="r" data-pitch="0"></li>
+      <li class="white-key" data-key="t" data-pitch="2"></li>
+      <li class="white-key" data-key="y" data-pitch="4"></li>
+      <li class="white-key" data-key="u" data-pitch="5"></li>
+      <li class="white-key" data-key="i" data-pitch="7"></li>
+      <li class="white-key" data-key="o" data-pitch="9"></li>
+      <li class="white-key" data-key="p" data-pitch="11"></li>
+      <li class="white-key" data-key="[" data-pitch="12"></li>
+      <li class="white-key" data-key="]" data-pitch="14"></li>
+      <li class="white-key" data-key="\\" data-pitch="16"></li>
     </ul>
     <ul id="black-keys">
-      <li class="black-key" data-pitch="-4"></li>
-      <li class="black-key" data-pitch="-3"></li>
+      <li class="black-key" data-key="2" data-pitch="-4"></li>
+      <li class="black-key" data-key="3" data-pitch="-3"></li>
       <li class="black-key hidden"></li>
-      <li class="black-key" data-pitch="1"></li>
-      <li class="black-key" data-pitch="3"></li>
+      <li class="black-key" data-key="5" data-pitch="1"></li>
+      <li class="black-key" data-key="6" data-pitch="3"></li>
       <li class="black-key hidden"></li>
-      <li class="black-key" data-pitch="6"></li>
-      <li class="black-key" data-pitch="8"></li>
-      <li class="black-key" data-pitch="10"></li>
+      <li class="black-key" data-key="8" data-pitch="6"></li>
+      <li class="black-key" data-key="9" data-pitch="8"></li>
+      <li class="black-key" data-key="0" data-pitch="10"></li>
       <li class="black-key hidden"></li>
-      <li class="black-key" data-pitch="13"></li>
-      <li class="black-key" data-pitch="15"></li>
+      <li class="black-key" data-key="=" data-pitch="13"></li>
+      <li class="black-key" data-key="backspace" data-pitch="15"></li>
     </ul>
   </div>
 </template>
 
 <template name="drums">
   <div id="drums">
-    <div id="bass-drum" data-pitch="0">
+    <div id="bass-drum" data-key="z" data-pitch="0">
       <ul class="lugs">
         <li class="lug first"></li>
         <li class="lug second"></li>
@@ -73,7 +73,7 @@
       </ul>
       <div class="sticker"></div>
     </div>
-    <div id="snare-drum" data-pitch="1">
+    <div id="snare-drum" data-key="x" data-pitch="1">
       <ul class="lugs">
         <li class="lug first"></li>
         <li class="lug second"></li>
@@ -86,22 +86,22 @@
       </ul>
       <div class="sticker"></div>
     </div>
-    <div id="cymbal" data-pitch="2">
+    <div id="cymbal" data-key="c" data-pitch="2">
       <div class="cap">
         <div class="top"></div>
       </div>
     </div>
-    <div id="hi-hat" data-pitch="3">
+    <div id="hi-hat" data-key="v" data-pitch="3">
       <div class="hat-bottom"></div>
       <div class="top"></div>
     </div>
-    <div id="clap" data-pitch="4">
+    <div id="clap" data-key="b" data-pitch="4">
       <ul>
         <li id="left-clap"></li>
         <li id="right-clap"></li>
       </ul>
     </div>
-    <div class="tom" data-pitch="5">
+    <div class="tom" data-key="n" data-pitch="5">
       <ul class="lugs">
         <li class="lug first"></li>
         <li class="lug second"></li>
@@ -113,7 +113,7 @@
         <li class="lug eighth"></li>
       </ul>
     </div>
-    <div class="tom" data-pitch="6">
+    <div class="tom" data-key="m" data-pitch="6">
       <ul class="lugs">
         <li class="lug first"></li>
         <li class="lug second"></li>

@@ -21,40 +21,7 @@ if Meteor.isClient
     time = new Date()
     event.preventDefault()
     instrument = if @key in ['z','x','c','v','b','n','m'] then "drums" else "piano"
-    keyMap =
-      z: 0
-      x: 1
-      c: 2
-      v: 3
-      b: 4
-      n: 5
-      m: 6
-      q: -5
-      2: -4
-      w: -3
-      3: -2
-      e: -1
-      r: 0
-      5: 1
-      t: 2
-      6: 3
-      y: 4
-      u: 5
-      8: 6
-      i: 7
-      9: 8
-      o: 9
-      0: 10
-      p: 11
-      "[": 12
-      "=": 13
-      "]": 14
-      backspace: 15
-      "\\": 16
-
-    Notes.insert
-      pitch: keyMap[@key]
-      instrument: instrument
+    $("##{instrument}").find("[data-key='#{@key}']").trigger('click')
 
   keymaster 'q,w,e,r,t,y,u,i,o,p,[,],\\,z,x,c,v,b,n,m,2,3,5,6,8,9,0,+,=,backspace', keyPress
 
