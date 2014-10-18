@@ -202,6 +202,7 @@ h1#logo {
     vertical-align: middle;
     cursor: pointer;
     #left-clap {
+      position: relative;
       border: 4px solid white;
       border-radius: 8px 0 0 8px;
       display: inline-block;
@@ -209,11 +210,21 @@ h1#logo {
       height: 4vw;
     }
     #right-clap {
+      position: relative;
+      border: 4px solid white;
       border: 4px solid white;
       border-radius: 0 8px 8px 0;
       display: inline-block;
       width: 1vw;
       height: 4vw;
+    }
+    &.clicked {
+      #left-clap {
+        left: 0.2vw;
+      }
+      #right-clap {
+        left: -0.2vw;
+      }
     }
   }
   #cymbal {
