@@ -24,7 +24,7 @@ if Meteor.isClient
     instrument = if @key in ['z','x','c','v','b','n','m'] then "drums" else "piano"
     $("##{instrument}").find("[data-key='#{@key}']").trigger('click')
 
-  keymaster 'q,w,e,r,t,y,u,i,o,p,[,],\\,z,x,c,v,b,n,m,2,3,5,6,8,9,0,+,=,backspace', keyPress
+  keymaster 'tab,q,w,e,r,t,y,u,i,o,p,[,],\\,z,x,c,v,b,n,m,1,2,3,5,6,8,9,0,+,=,backspace', keyPress
 
   Template.piano.events
     "click li": (e) ->
