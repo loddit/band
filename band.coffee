@@ -20,6 +20,7 @@ if Meteor.isClient
   keyPress = (event) ->
     time = new Date()
     event.preventDefault()
+    @key = "|" if @key is "\\" # for fix jQuery selector bug
     instrument = if @key in ['z','x','c','v','b','n','m'] then "drums" else "piano"
     $("##{instrument}").find("[data-key='#{@key}']").trigger('click')
 
