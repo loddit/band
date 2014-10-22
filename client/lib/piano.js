@@ -116,7 +116,7 @@
             sampleRate: 11025, // Hz
             bitDepth: 16, // bits/sample
             seconds: .5,
-            volume: 32000,//32767,
+            volume: 16000,//32767,
             freq: 440
         }, cfg);
 
