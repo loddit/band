@@ -52,14 +52,22 @@ keyCodeMap =
   '\'': 222
 
 codeKeyMap = {}
+holdKeyMap = {}
 
 for k,v of keyCodeMap
   codeKeyMap[v] = k
+  holdKeyMap[k] = false
 
 do(global = this) ->
   global.keyguru = (keys, callback) ->
     method = (event) ->
       event.keyName = codeKeyMap[event.keyCode]
-      if event.keyName in keys
+      if event.keyName in keys and holdKeyMap[event.keyName] is false
         callback(event)
+        holdKeyMap[event.keyName] = true
+    setHold = (event) ->
+      event.keyName = codeKeyMap[event.keyCode]
+      if event.keyName in keys
+        holdKeyMap[event.keyName] = false
     document.addEventListener("keydown", method, false)
+    document.addEventListener("keyup", setHold, false)
