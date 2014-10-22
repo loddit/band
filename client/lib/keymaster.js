@@ -41,6 +41,7 @@
 
   // handle keydown event
   function dispatch(event){
+    t = new Date()
     var key, tagName, handler, k, i, modifiersMatch;
     tagName = (event.target || event.srcElement).tagName;
     key = event.keyCode;
@@ -82,6 +83,7 @@
         }
       }
 	}
+  console.log((new Date() - t ));
   };
 
   // unset modifier keys on keyup

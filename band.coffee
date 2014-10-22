@@ -19,12 +19,12 @@ if Meteor.isClient
 
   keyPress = (event) ->
     time = new Date()
+    event.keyName = "|" if event.keyName is "\\" # for fix jQuery selector bug
+    instrument = if event.keyName in ['z','x','c','v','b','n','m'] then "drums" else "piano"
+    $("##{instrument}").find("[data-key='#{event.keyName}']").trigger('click')
     event.preventDefault()
-    @key = "|" if @key is "\\" # for fix jQuery selector bug
-    instrument = if @key in ['z','x','c','v','b','n','m'] then "drums" else "piano"
-    $("##{instrument}").find("[data-key='#{@key}']").trigger('click')
 
-  keymaster 'tab,q,w,e,r,t,y,u,i,o,p,[,],\\,z,x,c,v,b,n,m,1,2,3,5,6,8,9,0,+,=,backspace', keyPress
+  keyguru 'tab,q,w,e,r,t,y,u,i,o,p,[,],\\,z,x,c,v,b,n,m,1,2,3,5,6,8,9,0,+,=,backspace'.split(','), keyPress
 
   Template.piano.events
     "click li": (e) ->
