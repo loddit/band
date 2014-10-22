@@ -1,3 +1,7 @@
+# keyguru.coffee
+# (c) 2014 loddit
+# Inspired by keymaster.js
+
 keyCodeMap =
   'backspace': 8
   'tab': 9
