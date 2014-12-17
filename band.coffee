@@ -2,8 +2,6 @@ Notes = new Meteor.Collection 'notes'
 
 if Meteor.isClient
 
-  time = null
-
   Meteor.setInterval ->
     $('#background').css('background-color', "hsl(#{Math.random() * 255}, 70%, 30%)")
   , 1000
@@ -12,13 +10,11 @@ if Meteor.isClient
     added: (note) ->
       playInstrument = if note.instrument is 'piano' then playPiano else playDrums
       playInstrument note.pitch
-      console.log "play note: #{note.instrument}##{note.pitch} delay:#{(new Date() - time)}" # delay profile
       setTimeout ->
         Notes.remove note._id
       , 1000
 
   keyPress = (event) ->
-    time = new Date()
     event.keyName = "|" if event.keyName is "\\" # for fix jQuery selector bug
     instrument = if event.keyName in ['z','x','c','v','b','n','m'] then "drums" else "piano"
     $("##{instrument}").find("[data-key='#{event.keyName}']").trigger('click')
